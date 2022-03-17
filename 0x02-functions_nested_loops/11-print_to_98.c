@@ -1,32 +1,28 @@
-https://github.com/Yonashenok/alx-low_level_programming/blob/master/0x02-functions_nested_loops/11-print_to_98.c#:~:text=Blame-,%23include%20%3Cstdio.h%3E,%7D,-%C2%A9%202022%20GitHub%2C%20Inc#include <stdio.h>
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_to_98 - prints numbers to 98
- * @n: starting integer
+ * print_to_98 - Prints all natural numbers
+ * from n to 98.
  *
- * Description: prints all natural number from n - 98
+ * @n: input number.
  *
- * Return: void
+ * Return: no return.
  */
-
 void print_to_98(int n)
 {
-	if (n < 98)
-	{
-		while (n < 98)
-		{
-			printf("%d, ", n);
-			n++;
-		}
-	}
-	else if (n > 98)
-	{
-		while (n > 98)
-		{
-			printf("%d, ", n);
-			n--;
-		}
-	}
-	printf("98\n");
+if (n > 98)
+{
+for (; n > 98; n--)
+{
+printf("%d, ", n);
+}
+}
+else if (n < 98)
+{
+for (; n < 98; n++)
+{
+printf("%d, ", n);
+}
+}
+printf("%d\n", n);
 }
