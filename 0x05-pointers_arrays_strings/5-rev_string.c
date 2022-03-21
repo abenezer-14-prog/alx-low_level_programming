@@ -1,18 +1,35 @@
-
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ *rev_string - Entry point
+ *@s: pointer the string we want to change
+ *Return: no return
  */
-int main(void)
+void rev_string(char *s)
 {
-	char s[10] = "My School";
+	int i;
+	int j;
+	char gua[1000];
 
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
+	i = 0;
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+
+	j = 0;
+	while (*(s + j) != '\0')
+	{
+
+		gua[j] = *(s + j);
+		j++;
+	}
+
+	j = 0;
+	while (i >= 0)
+	{
+		s[j] = gua[i - 1];
+		i--;
+		j++;
+	}
 }
