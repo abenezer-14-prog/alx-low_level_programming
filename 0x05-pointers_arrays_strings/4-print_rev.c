@@ -1,15 +1,26 @@
 #include "main.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_rev - Entry point
+ * @s: pointer the string we want to reverse and print
  *
- * Return: Always 0.
+ * Return: no return
  */
-int main(void)
+void print_rev(char *s)
 {
-	char *str;
+	int i;
 
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	print_rev(str);
-	return (0);
+	i = 0;
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+
+	while (i > 0)
+	{
+		_putchar(*(s + i - 1));
+		i--;
+
+	}
+	_putchar('\n');
 }
