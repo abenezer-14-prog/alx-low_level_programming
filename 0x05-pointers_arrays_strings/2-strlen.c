@@ -1,18 +1,19 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * _strlen - Entry point
+ *@s: pointer the string we want to now length
  *
- * Return: Always 0.
+ * Return: 0
  */
-int main(void)
+int _strlen(char *s)
 {
-	char *str;
-	int len;
+	int i;
 
-	str = "My first strlen!";
-	len = _strlen(str);
-	printf("%d\n", len);
-	return (0);
+	i = 0;
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
