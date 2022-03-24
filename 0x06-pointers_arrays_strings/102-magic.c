@@ -1,53 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- *infinite_add - concatenates two strings
- *@n1: number 1
- *@n2: number 2
- *@r: pointer that contains sum of numbers
- *@size_r: size of buffer that contains sum of numbers
- *Return: the pointer with new number
- */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+int main(void)
 {
-	int longn1;
-	int longn2;
-	int bigger;
-	int op;
-	int ad;
+  int n;
+  int a[5];
+  int *p;
 
-	for (longn1 = 0; n1[longn1] != '\0'; longn1++)
-	for (longn2 = 0; n2[longn2] != '\0'; longn2++)
-	if (longn1 >= longn2)
-		bigger = longn1;
-	else
-		bigger = longn2;
-	if (size_r <= (bigger + 1))
-		return (0);
-	while (bigger > 0)
-	{
-		if (longn1 >= 0 && longn2 >= 0)
-		{
-			op = (*(n1 + longn1) - '0') + (*(n2 + longn2) - '0') + ad;
-		}
-		else
-		{
-			if (longn1 < 0 && longn2 >= 0)
-				op = (*(n2 + longn2) - '0') + ad;
-			else
-			{
-				if (longn1 >= 0 && longn2 < 0)
-					op = (*(n1 + longn1) - '0') + ad;
-			}
-		}
-	*(r + bigger) = (op % 10) + '0';
-	ad = op / 10;
-	longn1--;
-	longn2--;
-	bigger--;
-	}
-	if (*(r + 0) == 0)
-		return (r + 1);
-	r[bigger + 1] = '\n';
-	return (r);
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+  p[5] = 98;
+  /* ...so that this prints 98\n */
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }
